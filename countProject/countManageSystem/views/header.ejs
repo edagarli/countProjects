@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>统计管理系统</title>
+    <meta name="description" content="统计管理系统">
+    <meta name="author" content="edagarli,zli@hzjhp.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="/stylesheets/normalize.css">
+    <link rel="stylesheet" href="/stylesheets/skeleton.css">
+</head>
+<body>
+
+<!--<header>-->
+<!--<h1><%= title %></h1>-->
+<!--</header>-->
+
+<% if (admin) { %>
+<div class="navbar-spacer"></div>
+<nav class="navbar">
+    <div class="container">
+        <ul class="navbar-list">
+            <li class="navbar-item">
+                <a class="navbar-link button button-primary" href="/count">数据总览</a>
+            </li>
+            <li class="navbar-item">
+                <a class="navbar-link button button-primary" href="/count/designer">搭配师端数据</a>
+            </li>
+            <li class="navbar-item">
+                <a class="navbar-link button button-primary" href="/count/user">用户端数据</a>
+            </li>
+            <li class="navbar-item">
+                <a class="navbar-link button button-primary" href="/admin/logout">注销</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<% } %>
+
+<article>
+
+    <% if (success) { %>
+    <div class="msg"><%= success %></div>
+    <% } %>
+    <% if (error) { %>
+    <div class="msg"><%= error %></div>
+    <% } %>
